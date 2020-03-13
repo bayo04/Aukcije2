@@ -27,7 +27,7 @@ namespace AukcijeApiMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var bids = await _unitOfWork.Offers.GetAll();
+            var bids = await _unitOfWork.Bids.GetAll();
 
             return Ok(_mapper.Map<List<BidDto>>(bids));
         }
@@ -36,7 +36,7 @@ namespace AukcijeApiMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Get(int id)
         {
-            var bid = await _unitOfWork.Offers.GetById(id);
+            var bid = await _unitOfWork.Bids.GetById(id);
 
             return Ok(_mapper.Map<BidDto>(bid));
         }

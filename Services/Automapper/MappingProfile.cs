@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Core.Bids;
 using Core.Offers;
+using Core.Users;
+using Services.Automapper.BidDtos;
 using Services.Automapper.OfferDtos;
 using Services.Automapper.UserDtos;
 using System;
@@ -20,11 +22,13 @@ namespace Services.Automapper
 
             CreateMap<Offer, CreateOfferDto>();
             CreateMap<CreateOfferDto, Offer>();
+
             CreateMap<Bid, BidDto>();
             CreateMap<BidDto, Bid>();
 
             CreateMap<Bid, CreateBidDto>();
             CreateMap<CreateBidDto, Bid>();
+
             CreateMap<User, RegisterUserDto>();
             CreateMap<RegisterUserDto, User>();
         }
