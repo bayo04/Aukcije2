@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Core.Offers;
+using Core.Users;
 using Services.Automapper.OfferDtos;
+using Services.Automapper.UserDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,10 @@ namespace Services.Automapper
 
             CreateMap<Offer, CreateOfferDto>();
             CreateMap<CreateOfferDto, Offer>();
+
+            CreateMap<User, RegisterUserDto>();
+            CreateMap<RegisterUserDto, User>();
+
         }
     }
 }
