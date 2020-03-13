@@ -1,4 +1,5 @@
-﻿using Core.Offers;
+﻿using Core.Bids;
+using Core.Offers;
 using Core.Users;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace Core
         }
 
         public DbSet<Offer> Offers { get; set; }
+        public DbSet<Bid> Bids { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

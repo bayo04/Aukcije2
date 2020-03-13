@@ -8,6 +8,7 @@ namespace Services
     public interface IUnitOfWork
     {
         IOfferRepository Offers { get; set; }
+        IBidRepository Bids { get; set; }
 
         int Complete();
     }
